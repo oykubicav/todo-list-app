@@ -1,7 +1,9 @@
 /* style.css */
+
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,53 +15,110 @@ body {
 #app {
     background: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
 }
 
 h1 {
     text-align: center;
+    color: #333;
 }
 
+/* Form styling */
 #task-form {
     display: flex;
+    margin-bottom: 20px;
 }
 
 #task-input {
     flex: 1;
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
 }
 
-button {
-    padding: 10px;
+button[type="submit"] {
+    padding: 10px 20px;
     font-size: 16px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
+/* Task list styling */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    padding: 10px;
-    background: #f8f8f8;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
     margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 li.completed {
     text-decoration: line-through;
     color: #777;
 }
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#app.dark-mode {
+    background: #444;
+    color: #fff;
+}
+
+#task-input.dark-mode,
+button[type="submit"].dark-mode,
+.delete-btn.dark-mode {
+    background-color: #007bff;
+    color: white;
+}
+
+button[type="submit"].dark-mode:hover,
+.delete-btn.dark-mode:hover {
+    background-color: #0056b3;
+}
+
+li.dark-mode {
+    background: #666;
+    color: #eee;
+}
+
+li.completed.dark-mode {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
